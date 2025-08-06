@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <title>the Quran</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #f6f6f6;
+                margin: 0;
+                padding: 20px;
+                direction: rtl;
+            }
+            img {
+                width: 100px;
+                border-radius: 50px;
+                float: left;
+                margin-right: 10px;
+            }
+            .username {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-top: 0;
+            }
+            .quran-text {
+                clear: both;
+                background: #fff;
+                padding: 1em;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+                font-size: 1.05em;
+                line-height: 2;
+                margin-bottom: 20px;
+            }
+            footer {
+                margin-top: 40px;
+                text-align: center;
+                color: #666;
+                font-size: 0.9em;
+            }
+            .nav {
+                margin-bottom: 20px;
+                text-align: right;
+            }
+            .nav button {
+                background: #25736e;
+                color: #fff;
+                border: none;
+                border-radius: 6px;
+                padding: 8px 20px;
+                margin-left: 10px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background 0.2s;
+            }
+            .nav button:hover {
+                background: #19534d;
+            }
+        </style>
+        <script>
+            function showSurah(name) {
+                var surah = {
+                    'الفاتحة': `
+                        بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ١<br>
+                        ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ٢<br>
+                        ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ٣<br>
+                        مَـٰلِكِ يَوْمِ ٱلدِّينِ ٤<br>
+                        إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ٥<br>
+                        ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ٦<br>
+                        صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ ٧
+                    `,
+                    'الإخلاص': `
+                        بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ١<br>
+                        قُلْ هُوَ ٱللَّهُ أَحَدٌ ٢<br>
+                        ٱللَّهُ ٱلصَّمَدُ ٣<br>
+                        لَمْ يَلِدْ وَلَمْ يُولَدْ ٤<br>
+                        وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌ ٥
+                    `
+                };
+                document.getElementById('quran-text').innerHTML = surah[name];
+            }
+        </script>
+    </head>
+    <body>
+        <img src="images/quran.png" alt="Quran Cover">
+        <p class="username">@joud mustafa</p>
+        <div class="nav">
+            <button onclick="showSurah('الفاتحة')">الفاتحة</button>
+            <button onclick="showSurah('الإخلاص')">الإخلاص</button>
+        </div>
+        <div id="quran-text" class="quran-text">
+            بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ١<br>
+            ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ٢<br>
+            ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ٣<br>
+            مَـٰلِكِ يَوْمِ ٱلدِّينِ ٤<br>
+            إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ٥<br>
+            ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ٦<br>
+            صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ ٧
+        </div>
+        <footer>
+            &copy; 2025 @joud mustafa &mdash; كل الحقوق محفوظة. | <a href="https://github.com/joudmustafa" target="_blank" rel="noopener">GitHub</a>
+        </footer>
+    </body>
+</html>
